@@ -1,0 +1,38 @@
+{
+	"name": "@cool-vue/crud",
+	"version": "7.1.12",
+	"private": false,
+	"main": "./dist/index.umd.min.js",
+	"typings": "types/index.d.ts",
+	"scripts": {
+		"dev": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"tsc": "tsc --watch",
+		"dist": "tsc && yarn build --target lib --name index ./src/index.ts"
+	},
+	"dependencies": {
+		"array.prototype.flat": "^1.2.4",
+		"core-js": "^3.21.1",
+		"element-plus": "^2.5.4",
+		"lodash-es": "^4.17.21",
+		"mitt": "^3.0.1",
+		"vue": "^3.4.15"
+	},
+	"devDependencies": {
+		"@types/array.prototype.flat": "^1.2.1",
+		"@types/clone-deep": "^4.0.1",
+		"@vue/cli-plugin-babel": "^5.0.1",
+		"@vue/cli-plugin-typescript": "^5.0.3",
+		"@vue/cli-service": "^5.0.3",
+		"@vue/compiler-sfc": "^3.3.9",
+		"prettier": "^3.1.0",
+		"sass": "^1.55.0",
+		"sass-loader": "^12.6.0",
+		"typescript": "^5.3.3"
+	},
+	"files": [
+		"dist",
+		"types",
+		"index.d.ts"
+	]
+}

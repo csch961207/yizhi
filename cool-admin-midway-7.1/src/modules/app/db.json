@@ -1,0 +1,124 @@
+{
+    "dict_type": [
+        {
+            "name": "升级类型",
+            "key": "upgradeType",
+            "@childDatas": {
+                "dict_info": [
+                    {
+                        "typeId": "@id",
+                        "name": "安卓",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "0"
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "IOS",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "1"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "投诉类型",
+            "key": "complainType",
+            "@childDatas": {
+                "dict_info": [
+                    {
+                        "typeId": "@id",
+                        "name": "崩溃与错误",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "0"
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "支付问题",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "1"
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "体验不佳",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "2"
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "功能缺失",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "其他",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null,
+                        "value": "4"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "反馈类型",
+            "key": "feedbackType",
+            "@childDatas": {
+                "dict_info": [
+                    {
+                        "typeId": "@id",
+                        "name": "崩溃与错误",
+                        "value": "0",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "支付问题",
+                        "value": "1",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "体验不佳",
+                        "value": "2",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "功能缺失",
+                        "value": "3",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null
+                    },
+                    {
+                        "typeId": "@id",
+                        "name": "其他",
+                        "value": "-1",
+                        "orderNum": 1,
+                        "remark": null,
+                        "parentId": null
+                    }
+                ]
+            }
+        }
+    ]
+}

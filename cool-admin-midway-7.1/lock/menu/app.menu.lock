@@ -1,0 +1,355 @@
+[
+    {
+        "name": "应用管理",
+        "router": null,
+        "perms": null,
+        "type": 0,
+        "icon": "icon-app",
+        "orderNum": 2,
+        "viewPath": null,
+        "keepAlive": true,
+        "isShow": true,
+        "childMenus": [
+            {
+                "name": "套餐管理",
+                "router": "/app/goods",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-goods",
+                "orderNum": 0,
+                "viewPath": "modules/app/views/goods.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "app:goods:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "app:goods:update,app:goods:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "单个信息",
+                        "router": null,
+                        "perms": "app:goods:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "列表查询",
+                        "router": null,
+                        "perms": "app:goods:list",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "分页查询",
+                        "router": null,
+                        "perms": "app:goods:page",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "app:goods:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "版本管理",
+                "router": "/app/version",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-tag",
+                "orderNum": 0,
+                "viewPath": "modules/app/views/version.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "app:version:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "app:version:update,app:version:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "单个信息",
+                        "router": null,
+                        "perms": "app:version:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "列表查询",
+                        "router": null,
+                        "perms": "app:version:list",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "分页查询",
+                        "router": null,
+                        "perms": "app:version:page",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "app:version:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "意见反馈",
+                "router": "/app/feedback",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-info",
+                "orderNum": 0,
+                "viewPath": "modules/app/views/feedback.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "app:feedback:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "app:feedback:update,app:feedback:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "单个信息",
+                        "router": null,
+                        "perms": "app:feedback:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "列表查询",
+                        "router": null,
+                        "perms": "app:feedback:list",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "分页查询",
+                        "router": null,
+                        "perms": "app:feedback:page",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "app:feedback:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "投诉举报",
+                "router": "/app/complain",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-new",
+                "orderNum": 0,
+                "viewPath": "modules/app/views/complain.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "app:complain:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "app:complain:update,app:complain:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "单个信息",
+                        "router": null,
+                        "perms": "app:complain:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "列表查询",
+                        "router": null,
+                        "perms": "app:complain:list",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "分页查询",
+                        "router": null,
+                        "perms": "app:complain:page",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "app:complain:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 0,
+                        "viewPath": null,
+                        "keepAlive": true,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            }
+        ]
+    }
+]

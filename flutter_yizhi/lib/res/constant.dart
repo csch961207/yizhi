@@ -32,5 +32,7 @@ class Constant {
   static const int threshold = 128;
 
   // baseUrl
-  static const String baseUrl = 'http://192.168.60.179:8001/';
+  static const String baseUrl = 'https://yizhiapp.cn/api/';
+  // socketUrl
+  static const String socketUrl = 'https://yizhiapp.cn/';
 }

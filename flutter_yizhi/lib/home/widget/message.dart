@@ -57,13 +57,17 @@ class MessageState extends State<Message> with SingleTickerProviderStateMixin {
       }
       final String? accessToken = SpUtil.getString(Constant.accessToken);
       socket = IO.io(
-          '${Constant.baseUrl}chat',
+          '${Constant.socketUrl}chat',
           OptionBuilder().setTransports(['websocket']) // for Flutter or Dart VM
               .setAuth({"token": accessToken}) // optional
               .setExtraHeaders({
             "client-type": "app",
             "room-id": widget.id,
           }).build());
+      socket.onError((data) => {
+            print('onError'),
+            print(data),
+          });
       socket.onConnect((_) {
         print('connect');
       });
@@ -102,6 +106,9 @@ class MessageState extends State<Message> with SingleTickerProviderStateMixin {
         _isLoading = false;
       });
     } catch (e) {
+      print('-----------------');
+      print(e);
+      print('-----------------');
       setState(() {
         _isLoading = false;
       });

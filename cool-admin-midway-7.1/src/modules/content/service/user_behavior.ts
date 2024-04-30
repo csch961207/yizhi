@@ -442,7 +442,9 @@ export class ContentUserBehaviorService extends BaseService {
 
     const totalCount = total[0].count;
     const ids = list.map(item => item.dataId);
-    const contentDatas = await this.contentDataService.listByIds(ids);
+    const contentDatas = ids.length
+      ? await this.contentDataService.listByIds(ids)
+      : [];
     return {
       list: list.map(item => {
         const contentData = contentDatas.find(

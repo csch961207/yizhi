@@ -30,8 +30,7 @@ export class UserSmsService extends BaseService {
     if (!pluginKey) throw new CoolCommException('未配置短信插件');
     try {
       if (pluginKey == 'sms-tx') {
-        // await this.pluginService.invoke('sms-tx', 'send', [phone], [code]);
-        console.log(code);
+        await this.pluginService.invoke('sms-tx', 'send', [phone], [code]);
       }
       if (pluginKey == 'sms-ali') {
         await this.pluginService.invoke('sms-ali', 'send', [phone], {
@@ -40,6 +39,7 @@ export class UserSmsService extends BaseService {
       }
       this.cacheManager.set(`sms:${phone}`, code, this.config.timeout);
     } catch (error) {
+      console.log(error);
       throw new CoolCommException('发送过于频繁，请稍后再试');
     }
   }

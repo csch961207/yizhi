@@ -3,92 +3,92 @@
         {
             "id": 1,
             "title": "心即理、致良知、知行合一",
-            "tagList": "[\"历史\", \"人文\"]",
+            "tagList": ["历史", "人文"],
             "url": "https://b23.tv/4JxURxN",
             "hiddenContent": "阅尽好花千万树，愿君记取此一枝",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 2,
             "title": "《三体》广播剧全六季",
-            "tagList": "[\"广播剧\", \"科幻\"]",
+            "tagList": ["广播剧", "科幻"],
             "url": "https://xima.tv/1_PKRXLm?_sonic=0",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 3,
             "title": "《红楼梦》全本有声剧在这里，快来听听“中国人心中最重的一本书”",
-            "tagList": "[\"有声剧\", \"名著\", \"文学\"]",
+            "tagList": ["有声剧", "名著", "文学"],
             "url": "https://xima.tv/1_6RETsI?_sonic=0",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 4,
             "title": "《香肠派对》- 很喜欢的一款吃鸡手游\n",
-            "tagList": "[\"游戏\", \"手游\"]",
+            "tagList": ["游戏", "手游"],
             "url": "https://m.taptap.cn/app/%E9%A6%99%E8%82%A0%E6%B4%BE%E5%AF%B9-58881?share_id=a8d87252b072&utm_medium=share&utm_source=copylink",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 5,
             "title": "挖掘，战斗，探索，建造！在这个动感十足的冒险游戏里没有什么是不可能的。世界是你的画布，地面是你的油漆。\n\n拿起你的工具出发！制造武器和各种各样的敌人作战。前往地下寻找配件，金钱，以及其他有用的东西。收集资源创造你的世界所需要的一切。建造一栋房子，一个堡垒，甚至是一座城堡。人们会搬到那里居住，而或许他们还会卖给你不同的商品来协助你完成旅程。\n但要注意，那有很多挑战在等着你……你能完成任务吗？",
-            "tagList": "[\"游戏\", \"手游\", \"\"]",
+            "tagList": ["游戏", "手游"],
             "url": "https://www.taptap.cn/app/194610/all-info",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 6,
             "title": "塞尔达王国之泪加入购买计划中",
-            "tagList": "[\"Switch游戏\"]",
+            "tagList": ["Switch游戏"],
             "url": "https://m.tb.cn/h.5uvMRpr?tk=RxvqWPzeVxg",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 7,
             "title": "分享Syd Matters的单曲《Obstacles (PC游戏《奇异人生》主题曲)》",
-            "tagList": "[\"游戏\", \"音乐\"]",
+            "tagList": ["游戏", "音乐"],
             "url": "https://qishui.douyin.com/s/iNsmvug8/",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 8,
             "title": "最近购入的一款客制化键盘「狼蛛（AULA）F75客制化机械键盘gasket结构全键热插拔无线三模蓝牙电竞游戏办公 冰川蓝  新月轴」\n",
-            "tagList": "[\"客制化键盘\"]",
+            "tagList": ["客制化键盘"],
             "url": "https://3.cn/1VUmI-6v",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 9,
             "title": "听听华语乐坛女歌手们的声音",
-            "tagList": "[\"音乐\", \"女声\", \"华语\"]",
+            "tagList": ["音乐", "女声", "华语"],
             "url": "https://i.y.qq.com/n2/m/share/details/taoge.html?platform=11&appshare=android_qq&appversion=13010008&hosteuin=oK6z7i4k7e-ioz**&id=2365812496&ADTAG=wxfshare",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         },
         {
             "id": 10,
             "title": "喜欢历史的一定不要错过",
-            "tagList": "[\"历史\", \"APP\"]",
+            "tagList": ["历史", "APP"],
             "url": "https://m2.allhistory.com/",
             "hiddenContent": "",
             "userId": 1,
-            "visible": 1
+            "visible": true
         }
     ],
     "content_tag": [
@@ -104,33 +104,33 @@
         },
         {
             "id": 3,
-            "label": "TED",
-            "count": 1
+            "label": "音乐",
+            "count": 2
         },
         {
             "id": 4,
-            "label": "英语学习",
-            "count": 1
+            "label": "手游",
+            "count": 2
         },
         {
             "id": 5,
             "label": "广播剧",
-            "count": 0
+            "count": 1
         },
         {
             "id": 6,
             "label": "科幻",
-            "count": 0
+            "count": 1
         },
         {
             "id": 7,
             "label": "有声剧",
-            "count": 0
+            "count": 1
         },
         {
             "id": 8,
             "label": "名著",
-            "count": 0
+            "count": 1
         },
         {
             "id": 9,
@@ -140,7 +140,32 @@
         {
             "id": 10,
             "label": "游戏",
-            "count": 4
+            "count": 3
+        },
+        {
+            "id": 11,
+            "label": "Switch游戏",
+            "count": 1
+        },
+        {
+            "id": 12,
+            "label": "客制化键盘",
+            "count": 1
+        },
+        {
+            "id": 13,
+            "label": "女声",
+            "count": 1
+        },
+        {
+            "id": 14,
+            "label": "华语",
+            "count": 1
+        },
+        {
+            "id": 15,
+            "label": "APP",
+            "count": 1
         }
     ]
 }

@@ -12,6 +12,10 @@
 | ![](./preview/screenshot_1.jpg)    |  ![](./preview/screenshot_2.jpg)    | ![](./preview/screenshot_3.jpg)   |  ![](./preview/screenshot_4.jpg)   |
 | :--------------------------------: | :---------------------------------: | :-------------------------------: | :-------------------------------:
 
+下图是app和硬件交互
+
+![](https://img2.imgtp.com/2024/04/30/5ggZ02CW.gif)
+
 Android版安装包：[点击去下载](https://www.pgyer.com/K6uJ3U)。
 
 

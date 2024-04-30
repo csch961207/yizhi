@@ -1,6 +1,9 @@
 import { CoolConfig, MODETYPE } from '@cool-midway/core';
 import { MidwayConfig } from '@midwayjs/core';
 import * as fsStore from '@cool-midway/cache-manager-fs-hash';
+// redis缓存
+import * as redisStore from 'cache-manager-ioredis';
+import { createRedisAdapter } from '@midwayjs/socketio';
 
 export default {
   // use for cookie sign key, should change to your own and keep security
@@ -24,11 +27,16 @@ export default {
     whitelist: null,
   },
   // 缓存 可切换成其他缓存如：redis http://midwayjs.org/docs/extensions/cache
+  // Redis缓存
   cache: {
-    store: fsStore,
+    store: redisStore,
     options: {
-      path: 'cache',
-      ttl: -1,
+      port: 6379,
+      host: '127.0.0.1',
+      password: '',
+      db: 0,
+      keyPrefix: 'cool:',
+      ttl: null,
     },
   },
   cool: {
@@ -39,8 +47,8 @@ export default {
       // domain: 'http://127.0.0.1:8001',
       mode: MODETYPE.CLOUD,
       cos: {
-        accessKeyId: 'AKIDxoeTPD5vumOsEUizKdp1BKSdxKh6Pbj9',
-        accessKeySecret: 'cJA3sW1DICtcIxuu5MdtJiu2yiIpibM2',
+        accessKeyId: '换成你的accessKeyId',
+        accessKeySecret: '换成你的accessKeySecret',
         bucket: 'yizhi-1259138786',
         region: 'ap-beijing',
         publicDomain: 'https://yizhi-1259138786.cos.ap-beijing.myqcloud.com',
@@ -53,35 +61,12 @@ export default {
       // 软删除
       softDelete: true,
     },
-    sms: {
-      tx: {
-        /**
-         * 应用ID
-         */
-        appId: '1400875013',
-        /**
-         * 腾讯云secretId
-         */
-        secretId: 'AKIDxoeTPD5vumOsEUizKdp1BKSdxKh6Pbj9',
-        /**
-         * 腾讯云secretKey
-         */
-        secretKey: 'cJA3sW1DICtcIxuu5MdtJiu2yiIpibM2',
-        /**
-         * 签名，非必填，调用时可以传入
-         */
-        signName: '沧斑斓网站',
-        /**
-         * 模板，非必填，调用时可以传入
-         */
-        template: '2021970',
-      },
-    },
   } as CoolConfig,
   socketIO: {
     cors: {
       origin: 'http://localhost:9000',
       methods: ['GET', 'POST'],
+      adapter: createRedisAdapter({ host: '127.0.0.1', port: 6379 }),
     },
   },
 } as MidwayConfig;

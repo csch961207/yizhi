@@ -291,14 +291,14 @@ class _MyDevicePageState extends State<MyDevicePage>
       appBar: AppBar(
         title: const Text('我的设备'),
       ),
-      body: SingleChildScrollView(
-        child: _isLoading
-            ? const Center(
-                child: SpinKitDoubleBounce(
-                size: 24,
-                color: Colours.app_main,
-              ))
-            : Column(children: [
+      body: _isLoading
+          ? const Center(
+              child: SpinKitDoubleBounce(
+              size: 24,
+              color: Colours.app_main,
+            ))
+          : SingleChildScrollView(
+              child: Column(children: [
                 _isScanning
                     ? Container(
                         height: MediaQuery.of(context).size.height - 200,
@@ -431,7 +431,7 @@ class _MyDevicePageState extends State<MyDevicePage>
                         ],
                       )
               ]),
-      ),
+            ),
     );
   }
 }

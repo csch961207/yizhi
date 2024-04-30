@@ -45,12 +45,16 @@ class _MySettingPageState extends State<MySettingPage> {
 
   _init() async {
     packageInfo = await PackageInfo.fromPlatform();
-    version = packageInfo.version;
-    BaseEntity<VersionEntity> res = await MyRepository.checkVersion(version);
+    BaseEntity<VersionEntity> res =
+        await MyRepository.checkVersion(packageInfo.version);
     if (res.code == 1000) {
-      updateVersion = res.data!;
+      setState(() {
+        updateVersion = res.data;
+      });
     }
-    setState(() {});
+    setState(() {
+      version = packageInfo.version;
+    });
   }
 
   /// 删除缓存

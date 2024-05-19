@@ -38,6 +38,9 @@ class _HomePageState extends State<HomePage>
 
   ValueNotifier mode = ValueNotifier(0);
 
+  //是不是首次加载
+  bool isFirstLoading = true;
+
   @override
   void initState() {
     super.initState();
@@ -140,6 +143,11 @@ class _HomePageState extends State<HomePage>
               }
               if (!mounted) {
                 return;
+              }
+              if (isFirstLoading) {
+                Provider.of<YizhiViewModel>(context, listen: false)
+                    .joinMutualPrintingSpace();
+                isFirstLoading = false;
               }
               setState(() {
                 list = res.data!.list;

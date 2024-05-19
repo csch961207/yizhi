@@ -28,11 +28,14 @@ class Constant {
       '4fafc201-1fb5-459e-8fcc-c5c9c331914b';
   static const String customCharacteristicUuid =
       'beb5483e-36e1-4688-b7f5-ea07361b26a8';
+  static const String wifiCharUuid = '53d1ae1c-2a63-4469-8eaf-dc1e06801785';
   // 二值化的域值
   static const int threshold = 128;
 
   // baseUrl
   static const String baseUrl = 'https://yizhiapp.cn/api/';
+  // static const String baseUrl = 'http://192.168.158.179:8001/';
   // socketUrl
   static const String socketUrl = 'https://yizhiapp.cn/';
+  // static const String socketUrl = 'http://192.168.158.179:8001/';
 }

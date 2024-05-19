@@ -6,7 +6,7 @@ import { ContentDeviceEntity } from '../entity/device';
 import { v1 as uuid } from 'uuid';
 
 /**
- * 标签
+ * 设备
  */
 @Provide()
 export class ContentDeviceService extends BaseService {
@@ -28,6 +28,7 @@ export class ContentDeviceService extends BaseService {
     if (device) {
       return device;
     } else {
+      // 返回未发现设备联系管理员
       return await this.contentDeviceEntity.save({
         userId,
         // 生成16位的设备号不包含-，避免部分设备不支持

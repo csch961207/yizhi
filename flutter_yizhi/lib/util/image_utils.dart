@@ -62,11 +62,15 @@ class ImageUtils {
       List<int> row = [];
       for (var j = 0; j < width!; j++) {
         img.Pixel pixel = bwImage!.getPixel(j, i);
+        // print('--------------------');
+        // print(pixel.toString());
+        // print('--------------------');
         if (pixel.toList().last.toInt() > Constant.threshold) {
           row.add(255);
         } else {
           row.add(0);
         }
+        // row.add(pixel.toList().last.toInt());
       }
       rows.add(row);
     }
@@ -82,7 +86,9 @@ class ImageUtils {
       for (var i = 0; i < row.length; i += 8) {
         int value = 0;
         for (var j = 0; j < 8; j++) {
-          value = (value << 1) | (row[i + j] & 1);
+          if ((i + j) < row.length) {
+            value = (value << 1) | (row[i + j] & 1);
+          }
         }
         compressedData.add(value);
       }

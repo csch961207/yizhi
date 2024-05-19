@@ -35,4 +35,5 @@ class EventKeys {
   static const String refresh = "Refresh";
   static const String infoRefresh = "InfoRefresh";
   static const String update = "Update";
+  static const String mutualPrintingSpaceRefresh = "MutualPrintingSpaceRefresh";
 }

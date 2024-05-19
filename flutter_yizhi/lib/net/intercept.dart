@@ -2,10 +2,12 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_yizhi/login/model/login_res_model.dart';
+import 'package:flutter_yizhi/provider/yizhi_view_model.dart';
 import 'package:flutter_yizhi/res/constant.dart';
 import 'package:flutter_yizhi/util/device_utils.dart';
 import 'package:flutter_yizhi/util/log_utils.dart';
 import 'package:flutter_yizhi/util/other_utils.dart';
+import 'package:provider/provider.dart';
 import 'package:sp_util/sp_util.dart';
 import 'package:sprintf/sprintf.dart';
 

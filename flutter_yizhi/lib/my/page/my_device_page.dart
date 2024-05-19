@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:math' as math show sin, pi, sqrt;
+import 'dart:typed_data';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_yizhi/my/model/device_entity.dart';
 import 'package:flutter_yizhi/my/my_repository.dart';
+import 'package:flutter_yizhi/my/my_router.dart';
 import 'package:flutter_yizhi/net/base_entity.dart';
 import 'package:flutter_yizhi/routers/fluro_navigator.dart';
 import 'package:flutter_yizhi/util/toast_utils.dart';
@@ -12,6 +14,7 @@ import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:flutter_yizhi/provider/yizhi_view_model.dart';
 import 'package:flutter_yizhi/res/colors.dart';
 import 'package:flutter_yizhi/res/constant.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
@@ -31,6 +34,8 @@ class MyDevicePage extends StatefulWidget {
 
 class _MyDevicePageState extends State<MyDevicePage>
     with TickerProviderStateMixin {
+  final picker = ImagePicker();
+
   late AnimationController _controller;
 
   List<ScanResult> _scanResults = [];
@@ -74,17 +79,34 @@ class _MyDevicePageState extends State<MyDevicePage>
     setState(() {
       _isLoading = true;
     });
-    BaseEntity<DeviceEntity> res = await MyRepository.getMyDevice();
-    if (res.code == 1000) {
-      print('res.data: ${res.data}');
-      _myDeviceName = res.data!.deviceName;
-      onScan();
-    } else {
-      Toast.show(res.message);
-      // 返回
-      if (mounted) {
-        NavigatorUtils.goBack(context);
+    try {
+      if (Provider.of<YizhiViewModel>(context, listen: false)
+          .deviceName
+          .isEmpty) {
+        BaseEntity<DeviceEntity> res = await MyRepository.getMyDevice();
+        if (res.code == 1000) {
+          print('res.data: ${res.data}');
+          _myDeviceName = res.data!.deviceName;
+          if (mounted) {
+            Provider.of<YizhiViewModel>(context, listen: false)
+                .setDeviceName(_myDeviceName);
+          }
+        } else {
+          Toast.show(res.message);
+          // 返回
+          if (mounted) {
+            NavigatorUtils.goBack(context);
+          }
+        }
+      } else {
+        _myDeviceName =
+            Provider.of<YizhiViewModel>(context, listen: false).deviceName;
       }
+      onScan();
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+      });
     }
     setState(() {
       _isLoading = false;
@@ -186,6 +208,13 @@ class _MyDevicePageState extends State<MyDevicePage>
                   characteristic.uuid.toString() ==
                       Constant.customCharacteristicUuid) {
                 setNotification(characteristic);
+              } else if (service.uuid.toString() ==
+                      Constant.customServiceUuid &&
+                  characteristic.uuid.toString() == Constant.wifiCharUuid) {
+                if (mounted) {
+                  Provider.of<YizhiViewModel>(context, listen: false)
+                      .setWifiChar(characteristic);
+                }
               }
             }
           }
@@ -214,7 +243,7 @@ class _MyDevicePageState extends State<MyDevicePage>
           .setWriteCharacteristic(characteristic);
       await characteristic.setNotifyValue(!characteristic.isNotifying);
       _characteristic = characteristic.lastValueStream.listen((value) {
-        print('value: ${value}');
+        // print('value: ${value}');
         if (value.length == 4) {
           setState(() {
             _battery = value[0];
@@ -270,8 +299,6 @@ class _MyDevicePageState extends State<MyDevicePage>
                   _controller.repeat();
                   onScan();
                 }
-                // Provider.of<YizhiViewModel>(context, listen: false)
-                //     .printText('阅尽好花千万树，愿君记取此一枝');
               },
               child: const Icon(
                 Icons.bluetooth,
@@ -290,6 +317,14 @@ class _MyDevicePageState extends State<MyDevicePage>
     return Scaffold(
       appBar: AppBar(
         title: const Text('我的设备'),
+        // actions: [
+        //   GestureDetector(
+        //     onTap: () async {},
+        //     child: const Text('互印历史',
+        //         style: TextStyle(fontSize: 16, color: Colours.app_main)),
+        //   ),
+        //   const Padding(padding: EdgeInsets.only(right: 15))
+        // ],
       ),
       body: _isLoading
           ? const Center(
@@ -432,6 +467,18 @@ class _MyDevicePageState extends State<MyDevicePage>
                       )
               ]),
             ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colours.app_main,
+        onPressed: () async {
+          NavigatorUtils.push(context, MyRouter.mutualPrintingSpacePage);
+        },
+        tooltip: '互印空间',
+        shape: const CircleBorder(),
+        child: const Icon(
+          Icons.print,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }

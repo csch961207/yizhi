@@ -4,9 +4,11 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_yizhi/provider/yizhi_view_model.dart';
 import 'package:flutter_yizhi/res/colors.dart';
 import 'package:flutter_yizhi/routers/fluro_navigator.dart';
 import 'package:flutter_yizhi/util/image_utils.dart';
+import 'package:provider/provider.dart';
 import 'package:sp_util/sp_util.dart';
 
 import '../../net/base_entity.dart';

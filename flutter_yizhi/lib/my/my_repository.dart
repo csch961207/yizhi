@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_yizhi/my/model/cloud_device.dart';
 import 'package:flutter_yizhi/my/model/device_entity.dart';
 import 'package:flutter_yizhi/my/model/my_count_model.dart';
 import 'package:flutter_yizhi/my/model/version_entity.dart';
@@ -203,6 +204,52 @@ class MyRepository {
       ...responseData,
       'data': responseData['data'] != null
           ? VersionEntity.fromJson(responseData['data'])
+          : null
+    });
+  }
+
+  /// 获得互印空间设备列表
+  static Future<BaseEntity<CloudDevicePageEntity>> getCloudDevicePage(
+      int page, int size,
+      {String? keyWord, int? mode}) async {
+    var response = await DioUtils().dio.post('app/content/cloudDevice/page',
+        data: {"keyWord": keyWord, "page": page, "size": size});
+    Map<String, dynamic> responseData = jsonDecode(response.data);
+    return BaseEntity.fromJson({
+      ...responseData,
+      'data': responseData['data'] != null
+          ? CloudDevicePageEntity.fromJson(responseData['data'])
+          : null
+    });
+  }
+
+  /// 设备上云
+  static Future<BaseEntity> addCloudDevice(
+      SaveCloudDeviceEntity saveCloudDeviceEntity) async {
+    var response = await DioUtils().dio.post('app/content/cloudDevice/add',
+        data: saveCloudDeviceEntity.toJson());
+    Map<String, dynamic> responseData = jsonDecode(response.data);
+    return BaseEntity.fromJson(responseData);
+  }
+
+  /// 上云设备修改
+  static Future<BaseEntity> updateCloudDevice(
+      SaveCloudDeviceEntity saveCloudDeviceEntity) async {
+    var response = await DioUtils().dio.post('app/content/cloudDevice/update',
+        data: saveCloudDeviceEntity.toJson());
+    Map<String, dynamic> responseData = jsonDecode(response.data);
+    return BaseEntity.fromJson(responseData);
+  }
+
+  /// 获取我的分享内容详情
+  static Future<BaseEntity<SaveCloudDeviceEntity>> myCloudDevice() async {
+    var response =
+        await DioUtils().dio.get('app/content/cloudDevice/myCloudDevice');
+    Map<String, dynamic> responseData = jsonDecode(response.data);
+    return BaseEntity.fromJson({
+      ...responseData,
+      'data': responseData['data'] != null
+          ? SaveCloudDeviceEntity.fromJson(responseData['data'])
           : null
     });
   }

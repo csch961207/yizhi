@@ -61,6 +61,12 @@ export default {
       // 软删除
       softDelete: true,
     },
+    iot: {
+      auth: {
+        username: 'yizhi',
+        password: 'CF80C9E94F2867AA51A46F88B298DDF3',
+      },
+    },
   } as CoolConfig,
   socketIO: {
     cors: {

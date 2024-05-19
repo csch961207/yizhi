@@ -3,7 +3,7 @@ import { CoolController, BaseController } from '@cool-midway/core';
 import { UserInfoEntity } from '../../../user/entity/info';
 import { ContentDataEntity } from '../../entity/data';
 import { ContentDataService } from '../../service/data';
-import { Context } from 'vm';
+import { Context } from '@midwayjs/koa';
 
 /**
  * 一枝分享内容
